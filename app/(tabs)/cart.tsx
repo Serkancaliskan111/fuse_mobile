@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native'
 
-const Card = () => {
+const Cart = () => {
     return (
         <View>
             <Text>Card</Text>
         </View>
     )
 }
-export default Card
+export default Cart

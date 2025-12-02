@@ -1,6 +1,10 @@
-const { getDefaultConfig } = require("expo/metro-config");
-const { withNativeWind } = require('nativewind/metro');
+const { withNativeWind } = require("nativewind/metro");
+const { getSentryExpoConfig } = require("@sentry/react-native/metro");
 
-const config = getDefaultConfig(__dirname)
+// Sentry Expo config’i al
+const sentryConfig = getSentryExpoConfig(__dirname);
 
-module.exports = withNativeWind(config, { input: './app/global.css' })
+// NativeWind’i Sentry config ile sar
+module.exports = withNativeWind(sentryConfig, {
+    input: "./app/global.css", // Global Tailwind CSS path’in
+});
